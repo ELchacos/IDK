@@ -1,0 +1,33 @@
+import discord
+from discord.ext import commands
+
+intents = discord.Intents.default()
+intents.message_content = True
+
+bot = commands.Bot(command_prefix='/', intents=intents)
+
+descomposicion_residuos={
+    "botella de plastico":500,
+    "lata de aluminio":10,
+    "bolsa de platico":55,
+    "vidrio":4000
+}
+
+@bot.event
+async def on_ready():
+    print(f"se inicio el bot {bot.user}")
+
+@bot.command()
+async def impacto(ctx,objeto:str):
+    objeto=objeto.lower()
+    if objeto in descomposicion_residuos:
+        tiempo=descomposicion_residuos[objeto]
+        await ctx.send(f"El objeto {objeto} tarda aproximadamente {tiempo} años en descomponerse.")
+        
+        if tiempo>100:
+            await ctx.send("El objeto tiene un impacto alto, considera reutilizarlo nuevamente")
+
+    else:
+        await ctx.send(f"No se tiene informacion del objeto {objeto}")
+
+bot.run("")
