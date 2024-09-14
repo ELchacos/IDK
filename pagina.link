@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>puto el que lo lea</title>
+</head>
+<body>
+    <h1>Hello there</h1>
+    <p>General Kenovi<br>
+        OHHHH MA GA
+
+    </p>
+    <img src="https://www.museodelvideojuego.com/files/personajes/link.png" alt=""imagen good
+    
+    <form>
+        <label for="">ingresa tu nombre</label>
+        <input id="nombre" type="text">
+
+
+        <label for="contraseña">ingrese su mica</label>
+        <input type="password" id="contraseña">
+
+        <label for="cedula">ingrese su cedula</label>
+        <input type="file" id="cedula">
+
+
+    </form>
+
+    
+</body>
+</html>
+
